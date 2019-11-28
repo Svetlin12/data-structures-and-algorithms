@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
 
 using namespace std;
@@ -8,169 +7,142 @@ typedef vector<int> vi;
 
 void swap(int& a, int& b)
 {
-	int temp = a;
-	a = b;
-	b = temp;
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
-class Heap
+class MaxHeap
 {
 private:
 
-	vi vec;
+    vi arr;
 
-	void resize()
-	{
-		vi newVec;
-		int cap = capacity();
-		newVec.resize(2 * cap);
-		for (int i = 0; i < cap; i++)
-			newVec[i] = vec[i];
-		vec.clear();
-		vec = newVec;
-	}
+    const int parent(int ind)
+    {
+        return (ind - 1) / 2;
+    }
 
-	int size()
-	{
-		return (int)vec.size();
-	}
+    const int left(int ind)
+    {
+        return 2 * ind + 1;
+    }
 
-	int capacity()
-	{
-		return (int)vec.capacity();
-	}
+    const int right(int ind)
+    {
+        return 2 * ind + 2;
+    }
 
-	bool isFull()
-	{
-		return size() == capacity();
-	}
+    const bool hasLeft(int ind)
+    {
+        return left(ind) < arr.size();
+    }
 
-	int left(int i)
-	{
-		return 2 * i + 1;
-	}
+    const bool hasRight(int ind)
+    {
+        return right(ind) < arr.size();
+    }
 
-	int right(int i)
-	{
-		return 2 * i + 2;
-	}
+    void siftUp(int ind)
+    {
+        if (ind == 0)
+            return;
 
-	int parent(int i)
-	{
-		return (i - 1) / 2;
-	}
+        if (arr[parent(ind)] < arr[ind])
+        {
+            swap(arr[parent(ind)], arr[ind]);
+            siftUp(parent(ind));
+        }
+    }
 
-	void siftUp(int ind)
-	{
-		if (ind == 0)
-			return;
+    void siftDown(int ind)
+    {
+        if (!hasLeft(ind))
+            return;
 
-		int parentInd = parent(ind);
-		if (vec[ind] > vec[parentInd])
-		{
-			swap(vec[ind], vec[parentInd]);
-			siftUp(parentInd);
-		}
-	}
-
-	void siftDown(int ind)
-	{
-		int leftInd = left(ind);
-		if (leftInd >= size())
-			return;
-		if (leftInd + 1 < size())
-		{
-			if (vec[ind] < max(vec[leftInd], vec[leftInd + 1]))
-			{
-				if (vec[leftInd] > vec[leftInd + 1])
-				{
-					swap(vec[leftInd], vec[ind]);
-					siftDown(leftInd);
-				}
-				else
-				{
-					swap(vec[leftInd + 1], vec[ind]);
-					siftDown(leftInd + 1);
-				}
-			}
-		}
-		else
-		{
-			if (vec[ind] < vec[leftInd])
-			{
-				swap(vec[ind], vec[leftInd]);
-			}
-		}
-	}
+        int maxValChild = left(ind);
+        if (hasRight(ind) && arr[right(ind)] > arr[left(ind)])
+            maxValChild = right(ind);
+        if (arr[ind] < arr[maxValChild])
+        {
+            swap(arr[ind], arr[maxValChild]);
+            siftDown(maxValChild);
+        }
+    }
 
 public:
 
-	Heap()
-	{
-		vec.resize(1000);
-	}
-	
-	// O(NlogN)
-	void add(int value)
-	{
-		if (isFull())
-			resize();
+    MaxHeap()
+    {
+        arr.reserve(1000);
+    }
 
-		vec[size() - 1] = value;
-		siftUp(size() - 1);
-	}
+    void push(int val)
+    {
+        arr.push_back(val);
+        siftUp(arr.size() - 1);
+    }
 
-	// O(N)
-	void buildFloyd(int input[], int n)
-	{
-		vec.resize(n);
-		for (int i = 0; i < n; i++)
-		{
-			vec[i] = input[i];
-		}
-		for (int i = n - 1; i >= 0; i--)
-		{
-			siftDown(i);
-		}
-	}
+    void pop()
+    {
+        int size = arr.size();
+        if (size == 0)
+            return;
+        swap(arr[0], arr[size - 1]);
+        arr.pop_back();
+        siftDown(0);
+    }
 
-	void extract()
-	{
-		swap(vec[0], vec[size() - 1]);
-		vec.erase(vec.begin() + size() - 1);
-		siftDown(0);
-	}
+    int top()
+    {
+        if (arr.size() == 0)
+            return -1;
+        return arr[0];
+    }
 
-	int peek()
-	{
-		return vec[0];
-	}
+    void makeHeap(vi& input)
+    {
+        int size(input.size()), i;
+        arr.resize(size);
+        for(i = 0; i < size; ++i)
+            arr[i] = input[i];
+        for (i = (size / 2) - 1; i >= 0; i--)
+            siftDown(i);
+
+        arr.reserve(1000);
+    }
+
 };
 
 int main()
 {
-	Heap h;
-	h.add(3);
-	h.add(2);
-	h.add(1);
-	h.add(15);
-	h.add(5);
-	h.add(4);
-	h.add(45);
+    MaxHeap m;
+    m.push(4);
+    m.push(1);
+    m.push(10);
+    cout << m.top() << endl;
+    m.push(20);
+    cout << m.top() << endl;
+    m.pop();
+    cout << m.top() << endl;
+    m.pop();
+    m.pop();
+    cout << m.top() << endl;
+    m.pop();
+    cout << m.top() << endl;
 
-	cout << h.peek() << endl;
-	h.extract();
-	cout << h.peek() << endl;
+    vi input;
+    for (int i = 0; i < 100; i++)
+        input.push_back(i);
 
-	Heap h1;
-	int arr[] = { 3, 2, 1, 15, 5, 4, 45 };
-	int size = sizeof(arr) / sizeof(arr[0]);
+    MaxHeap m1;
+    m1.makeHeap(input);
 
-	h1.buildFloyd(arr, size);
+    for (int i = 0; i < 100; i++)
+    {
+        cout << m1.top() << endl;
+        m1.pop();
+    }
 
-	cout << h1.peek() << endl;
-	h1.extract();
-	cout << h1.peek() << endl;
-
-	return 0;
+    return 0;
 }

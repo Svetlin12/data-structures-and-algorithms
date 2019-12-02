@@ -2,7 +2,6 @@ class Solution {
 public:
     int minRefuelStops(int target, int startFuel, vector<vector<int>>& stations) {
         priority_queue<int> pq;
-        int coord = 0;
         int passed = 0;
         int counter = 0;
         stations.push_back({target, 0});
@@ -21,7 +20,6 @@ public:
                 return -1;
             
             pq.push(stations[passed][1]);
-            coord = stations[passed][0];
             passed++;
         }
         

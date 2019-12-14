@@ -18,13 +18,13 @@ private:
 		visited.assign(v + 1, false);
 	}
 
-	void dfsUtil(int current, vector<bool>& visited)
+	void dfsUtil(int current)
 	{
 		visited[current] = true;
 
 		for (auto child : adj[current])
 			if (!visited[child])
-				dfsUtil(child, visited);
+				dfsUtil(child);
 	}
 
 	bool isCyclicUtil(int curr, int parent)
@@ -61,7 +61,7 @@ public:
 	void dfs(int start)
 	{
 		clearVisited();
-		dfsUtil(start, visited);
+		dfsUtil(start);
 	}
 
 	void bfs(int start)

@@ -15,3 +15,5 @@
 
 Изход:
 2
+
+За повече информация: https://www.geeksforgeeks.org/maximum-edge-removal-tree-make-even-forest/

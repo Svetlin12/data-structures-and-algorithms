@@ -27,18 +27,21 @@ private:
 				dfsUtil(child);
 	}
 
-	bool isCyclicUtil(int curr, int parent)
+	bool isCyclicUtil(int curr, vector<bool>& recStack)
 	{
-		visited[curr] = true;
-
-		for (auto child : adj[curr])
+		if (!visited[curr])
 		{
-			if (visited[child] && child != parent)
-				return true;
-			else if (!visited[child] && isCyclicUtil(child, curr))
-				return true;
+			visited[curr] = true;
+			recStack[curr] = true;
+			for (auto child : adj[curr])
+			{
+				if (recStack[child])
+					return true;
+				else if (!visited[child] && isCyclicUtil(child, recStack))
+					return true;
+			}
 		}
-
+		recStack[curr] = false;
 		return false;
 	}
 
@@ -126,7 +129,8 @@ public:
 	bool isCyclic(int start)
 	{
 		clearVisited();
-		return isCyclicUtil(start, start);
+		vector<bool> recStack(v + 1, false);
+		return isCyclicUtil(start, recStack);
 	}
 
 	void dijkstra(int start)

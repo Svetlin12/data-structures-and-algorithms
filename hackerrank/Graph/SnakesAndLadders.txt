@@ -1,0 +1,73 @@
+Markov takes out his Snakes and Ladders game, stares at the board and wonders: "If I can always roll the die to whatever number I want,
+what would be the least number of rolls to reach the destination?"
+
+- Rules The game is played with a cubic die of  faces numbered  to .
+1. Starting from square , land on square  with the exact roll of the die. If moving the number rolled would place the player beyond square,
+no move is made.
+2. If a player lands at the base of a ladder, the player must climb the ladder. Ladders go up only.
+3. If a player lands at the mouth of a snake, the player must go down the snake and come out through the tail. Snakes go down only.
+
+- Input Format:
+The first line contains the number of tests, t.
+For each testcase:
+- The first line contains n, the number of ladders.
+- Each of the next n lines contains two space-separated integers, the start and end of a ladder.
+- The next line contains the integer m, the number of snakes.
+- Each of the next m lines contains two space-separated integers, the start and end of a snake.
+
+- Constaints:
+1 <= t <= 10
+1 <= n, m <= 15
+The board is always 10x10 with squares numbered 1 to 100.
+Neither square 1 nor square 100 will be the starting point of a ladder or snake.
+A square will have at most one endpoint from either a snake or a ladder.
+
+- Output Format:
+For each of the t test cases, print the least number of rolls to move from start to finish on a separate line. If there is no solution, 
+print -1.
+
+Example:
+
+Input:
+2
+3
+32 62
+42 68
+12 98
+7
+95 13
+97 25
+93 37
+79 27
+75 19
+49 47
+67 17
+4
+8 52
+6 80
+26 42
+2 72
+9
+51 19
+39 11
+37 29
+81 3
+59 5
+79 23
+53 7
+43 33
+77 21 
+
+Output:
+3
+5
+
+Explanation:
+For the first test:
+
+The player can roll a 5 and a 6 to land at square 12. There is a ladder to square 98. A roll of 2 ends the traverse in 3 rolls.
+
+For the second test:
+
+The player first rolls 5 and climbs the ladder to square 80. Three rolls of 6 get to square 98. A final roll of 2 lands on the target 
+square in 5 total rolls.

@@ -33,10 +33,10 @@ private:
         	recStack[curr] = true;
         	for (auto child : adj[curr])
         	{
-            	if (recStack[child])
-                	return true;
-            	else if (!visited[child] && isCyclicUtil(child, recStack))
-                	return true;
+            		if (recStack[child])
+                		return true;
+            		else if (!visited[child] && isCyclicUtil(child, recStack))
+                		return true;
         	}
         	recStack[curr] = false;
         	return false;

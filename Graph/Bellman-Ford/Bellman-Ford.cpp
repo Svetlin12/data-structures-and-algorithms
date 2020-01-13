@@ -6,9 +6,9 @@ using namespace std;
 
 typedef vector<pair<int, pair<int, int>>> vpp;
 
-void belmond(vpp& gr, int num_vertices, int start)
+void bellman-ford(vpp& gr, int num_vertices, int start)
 {
-	vector<int> paths((int)gr.size(), INT_MAX);
+	vector<int> paths(num_vertices, INT_MAX);
 	paths[start] = 0;
 	bool updated;
 
@@ -60,7 +60,7 @@ int main()
 	int start;
 	cin >> start;
 
-	belmond(gr, n, start);
+	bellman-ford(gr, n, start);
 
 	return 0;
 }

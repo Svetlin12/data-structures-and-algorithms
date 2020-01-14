@@ -46,7 +46,7 @@ int main()
     cin >> n >> m;
 
     vpp gr;
-    gr.reserve(2 * m);
+    gr.reserve(m);
     vector<int> parent(n + 1);
     for (int i = 0; i < n + 1; i++)
         parent[i] = i;

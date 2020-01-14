@@ -6,6 +6,8 @@ using namespace std;
 
 typedef vector<pair<int, pair<int, int>>> vpp;
 
+int edgesUsed = 0;
+
 void swap(int& a, int& b)
 {
     int temp = a;
@@ -37,6 +39,7 @@ void Union(pair<int, pair<int, int>>& x, vector<int>& parent, vector<int>& depth
             depth[r1]++;
         parent[r2] = r1;
         ans += x.first;
+        edgesUsed++;
     }
 }
 
@@ -67,6 +70,10 @@ int main()
     {
         Union(gr[i], parent, depth, ans);
     }
-    cout << ans;
+    
+    if (edgesUsed == n -1)
+        cout << ans;
+    else
+        cout << "-1";
     return 0;
 }

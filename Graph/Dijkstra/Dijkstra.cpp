@@ -29,17 +29,17 @@ void dijkstra(vvpii& gr, int start)
 				q.push({ paths[child.second], child.second });
 			}
 		}
-
-		int size = paths.size();
-		for (int i = 0; i < size; i++)
+	}
+	
+	int size = paths.size();
+	for (int i = 0; i < size; i++)
+	{
+		if (i != start)
 		{
-			if (i != start)
-			{
-				if (paths[i] = INT_MAX)
-					cout << -1 << " ";
-				else
-					cout << paths[i] << " ";
-			}
+			if (paths[i] = INT_MAX)
+				cout << -1 << " ";
+			else
+				cout << paths[i] << " ";
 		}
 	}
 }

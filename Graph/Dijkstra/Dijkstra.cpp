@@ -36,7 +36,7 @@ void dijkstra(vvpii& gr, int start)
 	{
 		if (i != start)
 		{
-			if (paths[i] = INT_MAX)
+			if (paths[i] == INT_MAX)
 				cout << -1 << " ";
 			else
 				cout << paths[i] << " ";

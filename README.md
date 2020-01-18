@@ -1,6 +1,6 @@
 1. An implementation of AVL tree can be seen inside AVL Tree folder
 2. An implementation of a BST can be seen in Binary Search Tree folder
-3. Graph algorithms can be found inside Graph folder (BFS, DFS, Dijkstra, Kruskal, Prim)
+3. Graph algorithms can be found inside Graph folder (BFS, DFS, Dijkstra, Kruskal, Prim, Bellman-Ford)
 4. An implementation of a heap can be seen in Heap folder
 5. An implementation of a KD Tree can be seen in KDTree folder
 6. The solution for the calculation of a reverse polish notation can be found in Reverse Polish notation folder

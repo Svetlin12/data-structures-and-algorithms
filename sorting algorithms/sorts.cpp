@@ -3,6 +3,9 @@
 #include <time.h>
 using namespace std;
 
+
+----------------------------------------------------------------------------------------------------------------------------
+// bubble sort
 void bubbleSort(vector<int>& arr)
 {
 	int size = (int)arr.size();
@@ -11,7 +14,8 @@ void bubbleSort(vector<int>& arr)
 			if (arr[i] > arr[i + 1])
 				swap(arr[i], arr[i + 1]);
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// selection sort
 // pick the minimal current element and place it at the i-th position
 void selectionSort(vector<int>& arr)
 {
@@ -27,7 +31,8 @@ void selectionSort(vector<int>& arr)
 			swap(arr[min], arr[i]);
 	}
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// insertion sort
 // pick the current element and place it at its right position
 void insertionSort(vector<int>& arr)
 {
@@ -44,7 +49,8 @@ void insertionSort(vector<int>& arr)
 		arr[j + 1] = key;
 	}
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// merge sort
 void merge(vector<int>& nums, int left, int middle, int right)
 {
 	int sizeL = middle - left + 1;
@@ -86,7 +92,8 @@ void mergeSort(vector<int>& nums, int left, int right)
 		merge(nums, left, middle, right);
 	}
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// quick sort
 int partition(vector<int>& nums, int left, int right)
 {
 	int pivot = nums[right];
@@ -121,7 +128,8 @@ void quickSort(vector<int>& nums, int left, int right)
 		quickSort(nums, pi + 1, right);
 	}
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// counting sort
 // only works with positive numbers
 void countingSort(vector<int>& nums)
 {
@@ -150,7 +158,8 @@ void countingSort(vector<int>& nums)
 		count[copy[i]]--;
 	}
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// heap sort
 void heapify(vector<int>& nums, int size, int index)
 {
     int largest = index;
@@ -182,10 +191,10 @@ void heapSort(vector<int>& nums)
         heapify(nums, i - 1, 0);
     }
 }
-
+----------------------------------------------------------------------------------------------------------------------------
 int main()
 {
-	srand(time(nullptr));
+	srand(time(nullptr)); // part of quick sort
 
 	return 0;
 }

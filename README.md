@@ -11,3 +11,4 @@
 11. The folder leetcode contains separate solved exercises from LeetCode.
 12. An implementation of the different searching algorithms can be found in searching algorithms folder.
 13. An implementation of the different (basic) sorting algorithms can be found in sorting algorithms folder.
+14. An implementation of rolling hash can be found in Rolling Hash folder.

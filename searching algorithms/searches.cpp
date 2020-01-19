@@ -4,6 +4,8 @@
 #include <time.h>
 using namespace std;
 
+----------------------------------------------------------------------------------------------------------------------------
+// linear search
 bool linearSearch(vector<int>& arr, int target)
 {
 	int size = (int)arr.size();
@@ -12,7 +14,8 @@ bool linearSearch(vector<int>& arr, int target)
 			return true;
 	return false;
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// binary search
 bool binarySearch(vector<int>& arr, int target)
 {
 	int start = 0;
@@ -32,7 +35,8 @@ bool binarySearch(vector<int>& arr, int target)
 
 	return false;
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// ternary search
 bool ternarySearch(vector<int>& arr, int target, int left, int right)
 {
 	if (left > right)
@@ -50,7 +54,8 @@ bool ternarySearch(vector<int>& arr, int target, int left, int right)
 	else
 		return ternarySearch(arr, target, mid1 + 1, mid2 - 1);
 }
-
+----------------------------------------------------------------------------------------------------------------------------
+// jump search
 bool jumpSearch(vector<int> arr, int target)
 {
 	int size = (int)arr.size();
@@ -79,7 +84,7 @@ bool jumpSearch(vector<int> arr, int target)
 
 	return false;
 }
-
+----------------------------------------------------------------------------------------------------------------------------
 //quick search
 int partition(vector<int>& nums, int left, int right)
 {
@@ -116,7 +121,7 @@ int randomizedSelect(vector<int>& nums, int left, int right, int k)
 	else
 		return randomizedSelect(nums, q + 1, right, k);
 }
-
+----------------------------------------------------------------------------------------------------------------------------
 int main()
 {
 	srand(time(nullptr));

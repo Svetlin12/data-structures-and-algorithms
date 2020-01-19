@@ -60,7 +60,7 @@ public:
 		{
 			insertHead(data);
 		}
-		else if (pos == size)
+		else if (pos == size - 1)
 		{
 			insertTail(data);
 		}
@@ -108,8 +108,6 @@ public:
 			delete tail;
 			traverse->next = nullptr;
 			tail = traverse;
-			if (tail == nullptr)
-				head = nullptr;
 		}
 		size--;
 	}

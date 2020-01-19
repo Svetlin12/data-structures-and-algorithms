@@ -6,6 +6,6 @@
 6. The solution for the calculation of a reverse polish notation can be found in Reverse Polish notation folder.
 7. An implementation of Trie can be seen in Trie folder.
 8. The folder hackerrank contains separate solved exercises from Hackerrank.
-9.The folder leetcode contains separate solved exercises from LeetCode.
+9. The folder leetcode contains separate solved exercises from LeetCode.
 10. An implementation of the different searching algorithms can be found in searching algorithms folder.
 11. An implementation of the different (basic) sorting algorithms can be found in sorting algorithms folder.

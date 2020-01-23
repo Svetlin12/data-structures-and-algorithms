@@ -61,7 +61,7 @@ private:
             return;
 
         int maxValChild = left(ind);
-        if (hasRight(ind) && arr[right(ind)] > arr[left(ind)])
+        if (hasRight(ind) && arr[right(ind)] > arr[maxValChild])
             maxValChild = right(ind);
         if (arr[ind] < arr[maxValChild])
         {

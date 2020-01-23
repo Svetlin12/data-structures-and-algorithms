@@ -19,14 +19,17 @@ void dijkstra(vvpii& gr, int start)
 	{
 		pair<int, int> top = q.top();
 		q.pop();
-
-		visited[top.second] = true;
-		for (auto child : gr[top.second])
+		
+		if (!visited[top.second])
 		{
-			if (!visited[child.second] && paths[top.second] + child.first < paths[top.second])
+			visited[top.second] = true;
+			for (auto child : gr[top.second])
 			{
-				paths[child.second] = paths[top.second] + child.first;
-				q.push({ paths[child.second], child.second });
+				if (!visited[child.second] && paths[top.second] + child.first < paths[top.second])
+				{
+					paths[child.second] = paths[top.second] + child.first;
+					q.push({ paths[child.second], child.second });
+				}
 			}
 		}
 	}

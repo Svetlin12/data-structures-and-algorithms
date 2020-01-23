@@ -35,7 +35,7 @@ void Union(pair<int, pair<int, int>>& x, vector<int>& parent, vector<int>& depth
     {
         if (depth[r1] < depth[r2])
             swap(r1, r2);
-        if (depth[r1] == depth[r2])
+        else if (depth[r1] == depth[r2])
             depth[r1]++;
         parent[r2] = r1;
         ans += x.first;

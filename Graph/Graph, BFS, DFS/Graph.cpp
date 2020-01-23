@@ -129,24 +129,6 @@ public:
 		vector<bool> recStack(v + 1, false);
 		return isCyclicUtil(start, recStack);
 	}
-
-	void dijkstra(int start)
-	{
-		vector<int> d(G.size(), INT_MAX);
-		priority_queue<pair<int, int>> pq;
-		pq.push({ 0, start });
-
-		while (!pq.empty())
-		{
-			int dist = pq.top().first;
-			int v = pq.top().second;
-			pq.pop();
-
-			d[v] = dist;
-			for (auto child : G[v])
-				pq.push({ dist + child.second, child.first });
-		}
-	}
 };
 
 int main()

@@ -1,6 +1,6 @@
 class Solution {
 public:
-        void backtrack(vector<string>& ans, string digits, int current, string str, unordered_map<int, string> m) {
+    void backtrack(vector<string>& ans, string digits, int current, string str, unordered_map<int, string> m) {
         for (int i = 0; i < m[digits[current] - '0'].size(); i++) {
             str += m[digits[current] - '0'][i];
             if (current == digits.size() - 1) {

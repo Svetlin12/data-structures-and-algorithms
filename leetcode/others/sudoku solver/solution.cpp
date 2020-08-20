@@ -23,10 +23,10 @@ vector<int> getBoxRowCol(int row, int col) {
         return {0, 0, 2, 2};
     }
     else if (row >= 3 && row < 6 && col >= 0 && col < 3) {
-        return {3, 0, 5, 3};
+        return {3, 0, 5, 2};
     }
     else if (row >= 6 && row < 9 && col >= 0 && col < 3) {
-        return {6, 0, 8, 3};
+        return {6, 0, 8, 2};
     }
     else if (row >= 0 && row < 3 && col >= 3 && col < 6) {
         return {0, 3, 2, 5};
@@ -60,8 +60,8 @@ bool isAlreadyInBox(vector<vector<char>>& board, int row, int col, char num) {
     int startRow = pos[0], endRow = pos[2];
     int startCol = pos[1], endCol = pos[3];
 
-    for (int r = startRow; r < endRow; r++) {
-        for (int c = startCol; c < endCol; c++) {
+    for (int r = startRow; r <= endRow; r++) {
+        for (int c = startCol; c <= endCol; c++) {
             if (board[r][c] == num) {
                 return true;
             }

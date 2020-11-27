@@ -10,7 +10,7 @@
 |8         | The solution for the calculation of a reverse polish notation can be found in Reverse Polish notation folder.    |
 |9         | Rolling Hash folder contains an implementation of Rolling Hash algorithm (hash function)                         |
 |10        | Segment Tree folder contains an implementation of Segment Tree (for ranged minimum queries)                      |
-|11         | A simple implementation of stack using vector can be found in Stack folder.                                      |
+|11        | A simple implementation of stack using vector can be found in Stack folder.                                      |
 |12        | An implementation of Trie can be seen in Trie folder.                                                            |
 |13        | The folder codeforces contains solutions to problems from Codeforces.                                            |
 |14        | The folder hackerrank contains separate solved exercises from Hackerrank.                                        |

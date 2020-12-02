@@ -1,21 +1,20 @@
 |Position  |    Explanation of folder                                                                                         |
 |----------|------------------------------------------------------------------------------------------------------------------|
-|1         | An implementation of AVL tree can be seen inside AVL Tree folder.                                                |
-|2         | An implementation of a BST can be seen in Binary Search Tree folder.                                             |
-|3         | Disjoint Set Union folder contains an implementation of Union-Find algorithm by size/rank.                       |
-|4         | Graph algorithms can be found inside Graph folder (BFS, DFS, Dijkstra, Kruskal, Prim, Bellman-Ford).             |
-|5         | An implementation of a heap can be seen in Heap folder.                                                          |
-|6         | An implementation of a KD Tree can be seen in KDTree folder.                                                     |
-|7         | An implementation of a linked list can be found in Linked List folder.                                           |
-|8         | The solution for the calculation of a reverse polish notation can be found in Reverse Polish notation folder.    |
-|9         | Rolling Hash folder contains an implementation of Rolling Hash algorithm (hash function)                         |
-|10        | Segment Tree folder contains an implementation of Segment Tree (for ranged minimum queries)                      |
-|11        | Sparse Tree folder contains an implementation of Sparse Table for Range Minimum Queries (RMQ)                    |
-|12        | A simple implementation of stack using vector can be found in Stack folder.                                      |
-|13        | An implementation of Trie can be seen in Trie folder.                                                            |
-|14        | The folder codeforces contains solutions to problems from Codeforces.                                            |
-|15        | The folder hackerrank contains separate solved exercises from Hackerrank.                                        |
-|16        | The folder leetcode contains separate solved exercises from LeetCode.                                            |
-|17        | An implementation of the different searching algorithms can be found in searching algorithms folder.             |
-|18        | An implementation of the different (basic) sorting algorithms can be found in sorting algorithms folder.         |
-|19        | An implementation of rolling hash can be found in Rolling Hash folder.                                           |
+|1         | An implementation of AVL tree can be seen inside [AVL Tree folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/AVL%20Tree).                                                |
+|2         | An implementation of a BST can be seen in [Binary Search Tree folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Binary%20Search%20Tree).                                             |
+|3         | [Disjoint Set Union folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Disjoint%20Set%20Union) contains an implementation of Union-Find algorithm by size/rank.                       |
+|4         | Graph algorithms can be found inside [Graph folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Graph) (BFS, DFS, Dijkstra, Kruskal, Prim, Bellman-Ford).             |
+|5         | An implementation of a heap can be seen in [Heap folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Heap).                                                          |
+|6         | An implementation of a KD Tree can be seen in [KDTree folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/KDTree).                                                     |
+|7         | An implementation of a linked list can be found in [Linked List folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Linked%20List).                                           |
+|8         | The solution for the calculation of a reverse polish notation can be found in [Reverse Polish notation folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Reverse%20Polish%20notation).    |
+|9         | [Rolling Hash folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Rolling%20Hash) contains an implementation of Rolling Hash algorithm (hash function)                         |
+|10        | [Segment Tree folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Segment%20Tree) contains an implementation of Segment Tree (for ranged minimum queries)                      |
+|11        | [Sparse Tree folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Sparse%20Table) contains an implementation of Sparse Table for Range Minimum Queries (RMQ)                    |
+|12        | A simple implementation of stack using vector can be found in [Stack folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Stack).                                      |
+|13        | An implementation of Trie can be seen in [Trie folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/Trie).                                                            |
+|14        | The folder [codeforces](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/codeforces) contains solutions to problems from Codeforces.                                            |
+|15        | The folder [hackerrank](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/hackerrank) contains separate solved exercises from Hackerrank.                                        |
+|16        | The folder [leetcode](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/leetcode) contains separate solved exercises from LeetCode.                                            |
+|17        | An implementation of the different searching algorithms can be found in [searching algorithms folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/searching%20algorithms).             |
+|18        | An implementation of the different (basic) sorting algorithms can be found in [sorting algorithms folder](https://github.com/Svetlin12/data-structures-and-algorithms/tree/master/sorting%20algorithms).         |

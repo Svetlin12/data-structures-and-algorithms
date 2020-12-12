@@ -1,4 +1,4 @@
-/ implementation of sparse table for answering range minimum queries
+// implementation of sparse table for answering range minimum queries
 // time complexity of precomputation is O(NlogN) where N is the size of the initial array
 // note that (1 << j) means 2^j
 

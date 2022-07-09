@@ -140,17 +140,17 @@ bool is_valid(string s) {
 }
 
 int main() {
-    // string s1 = "()";
-    // string s2 = "()[]{}";
-    // string s3 = "((()[]{()}))";
-    // string s4 = "(({)}))";
-    // string s5 = "{(])";
+    string s1 = "()";
+    string s2 = "()[]{}";
+    string s3 = "((()[]{()}))";
+    string s4 = "(({)}))";
+    string s5 = "{(])";
 
-    // cout << is_valid(s1) << endl;
-    // cout << is_valid(s2) << endl;
-    // cout << is_valid(s3) << endl;
-    // cout << is_valid(s4) << endl;
-    // cout << is_valid(s5) << endl;
+    cout << is_valid(s1) << endl;
+    cout << is_valid(s2) << endl;
+    cout << is_valid(s3) << endl;
+    cout << is_valid(s4) << endl;
+    cout << is_valid(s5) << endl;
 
     stack<double> stack_doubles;
     stack_doubles.push(2.34);

@@ -56,6 +56,7 @@ private:
         }
         tail = nullptr;
         head = nullptr;
+        size = 0;
     } 
 public:
     list() {
